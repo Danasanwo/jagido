@@ -1,5 +1,5 @@
 $(document).ready(function () {
   setTimeout(function () {
-    $(".vid").hide();
+    $("#montage").hide();
   }, 5000);
 });

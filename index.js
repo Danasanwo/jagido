@@ -13,7 +13,7 @@ let curs = document.querySelector(".cursor");
 
 let check = document.querySelector(".check");
 let epiph = check.querySelector("video");
-let mywork = check.querySelector(".myworks");
+// let mywork = check.querySelector(".myworks");
 
 // event listeners
 menu.addEventListener("click", dropdown);
@@ -55,18 +55,18 @@ function dropup() {
 const controller = new ScrollMagic.Controller();
 
 const scene = new ScrollMagic.Scene({
-  duration: 1200,
+  duration: 1000,
   triggerElement: check,
   triggerHook: 0,
 })
   .setPin(check)
   .addTo(controller);
 
-scene.on("enter", (e) => {
+scene.on("enter", () => {
   epiph.play();
-  console.log(check.scrollPos);
+  //   console.log(e.scrollPos);
 });
 
-scene.on("change", (e) => {
+scene.on("leave", () => {
   epiph.pause();
 });

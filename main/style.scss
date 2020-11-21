@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 10px;
-  cursor: none;
+  // cursor: none;
 }
 html {
   scroll-behavior: smooth;
@@ -135,14 +135,14 @@ header {
     width: 100%;
     height: 100vh;
     object-fit: cover;
-    // position: fixed;
+    position: fixed;
   }
 }
 
 .first-box {
   height: 120vh;
   padding: 0 0 20vh 0;
-  background: #ffffff;
+  // background: #ffffff;
   .name {
     width: 100%;
     padding: 10px;
@@ -219,7 +219,7 @@ header {
   .about-me {
     width: 50%;
     height: 100vh;
-    background: #dedede;
+    background: #dddddd;
 
     .bio {
       padding: 40px 40px 25px 40px;
@@ -263,32 +263,35 @@ header {
     .myworks {
       position: absolute;
       width: 100%;
-      top: 50vh;
+      height: 100vh;
+      background: rgba($color: #000000, $alpha: 0.8);
+      top: 0;
       left: 0;
+      padding: 50vh 0 0;
       font-family: "Noto Sans KR", sans-serif;
       font-weight: 200;
-      font-variant: sma;
+      font-variant: small-caps;
       text-align: center;
       p {
-        font-size: 8rem;
+        font-size: 7rem;
         color: #efefef;
         text-shadow: 1px 1px 2px 2px#a8a6a6, -1px -1px 2px 2px #656565;
       }
       .work {
         padding: 20px;
-        width: 30%;
+        width: 20%;
         margin: auto;
         border: 1px #efefef solid;
         &:hover {
           background: #efefef;
-          opacity: 0.3;
+          opacity: 0.7;
           color: #6f6f6f;
           & a {
             color: #000000;
           }
         }
         a {
-          font-size: 4rem;
+          font-size: 3rem;
           font-weight: 100;
           display: block;
           color: #efefef;

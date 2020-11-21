@@ -4,7 +4,6 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 10px;
-  cursor: none;
 }
 
 html {
@@ -144,12 +143,12 @@ header nav ul li a:hover {
   height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
+  position: fixed;
 }
 
 .first-box {
   height: 120vh;
   padding: 0 0 20vh 0;
-  background: #ffffff;
 }
 
 .first-box .name {
@@ -231,7 +230,7 @@ header nav ul li a:hover {
 .sec-box .about-me {
   width: 50%;
   height: 100vh;
-  background: #dedede;
+  background: #dddddd;
 }
 
 .sec-box .about-me .bio {
@@ -275,30 +274,33 @@ header nav ul li a:hover {
 .third-box .check .myworks {
   position: absolute;
   width: 100%;
-  top: 50vh;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
   left: 0;
+  padding: 50vh 0 0;
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 200;
-  font-variant: sma;
+  font-variant: small-caps;
   text-align: center;
 }
 
 .third-box .check .myworks p {
-  font-size: 8rem;
+  font-size: 7rem;
   color: #efefef;
   text-shadow: 1px 1px 2px 2px #a8a6a6, -1px -1px 2px 2px #656565;
 }
 
 .third-box .check .myworks .work {
   padding: 20px;
-  width: 30%;
+  width: 20%;
   margin: auto;
   border: 1px #efefef solid;
 }
 
 .third-box .check .myworks .work:hover {
   background: #efefef;
-  opacity: 0.3;
+  opacity: 0.7;
   color: #6f6f6f;
 }
 
@@ -307,7 +309,7 @@ header nav ul li a:hover {
 }
 
 .third-box .check .myworks .work a {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 100;
   display: block;
   color: #efefef;
