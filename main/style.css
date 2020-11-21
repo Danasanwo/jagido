@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 10px;
+  cursor: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .container {
+  background: #eeeeee;
+}
+
+.sec-box,
+.third-box {
+  margin: 0 0 15vh 0;
+}
+
+.cursor {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  pointer-events: none;
+  background: #656565;
+}
+
+header {
+  width: 100%;
+  height: 20vh;
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .mode {
+  width: 55px;
+  height: 35px;
+  border: 1px solid #656565;
+  border-radius: 15px;
+  padding: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header nav {
+  width: 30%;
+}
+
+header nav .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Noto Sans KR", sans-serif;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+header nav .menu p {
+  font-size: 2rem;
+  padding: 0 15px;
+  cursor: default;
+}
+
+header nav .menu i {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  font-family: "Noto Sans KR", sans-serif;
+  font-variant: small-caps;
+  padding: 2px 30px;
+  visibility: hidden;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+header nav ul li :hover {
+  border-bottom: 1px solid black;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.8rem;
+}
+
+header nav ul li a:hover {
+  font-size: 1.9rem;
+}
+
+.menu:hover i {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.menu:hover + ul li {
+  visibility: visible;
+}
+
+.vid {
+  background: black;
+}
+
+.vid #montage {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.first-box {
+  height: 120vh;
+  padding: 0 0 20vh 0;
+  background: #ffffff;
+}
+
+.first-box .name {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  margin: auto;
+  height: 20vh;
+}
+
+.first-box .name .hello {
+  font-size: 7rem;
+}
+
+.first-box .name .nom {
+  font-size: 10rem;
+  position: relative;
+  top: 25vh;
+  color: black;
+  -webkit-text-stroke: 1px #000000;
+  opacity: 0.8;
+}
+
+.first-box .name .nom:hover + .cursor {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  mix-blend-mode: difference;
+  background: white;
+}
+
+.first-box .name .ami {
+  font-size: 2rem;
+}
+
+.first-box .name p {
+  font-family: "Noto Serif KR", serif;
+}
+
+.first-box .my-picture {
+  width: 100%;
+  margin: auto;
+}
+
+.first-box .my-picture .pic {
+  margin: auto;
+  width: 100%;
+  height: 75vh;
+}
+
+.first-box .my-picture .pic img {
+  display: block;
+  margin: auto;
+  height: inherit;
+}
+
+.sec-box {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background: #eeeeee;
+}
+
+.sec-box .portrait {
+  width: 50%;
+  height: 75vh;
+}
+
+.sec-box .portrait img {
+  display: block;
+  height: inherit;
+  padding: 25px;
+}
+
+.sec-box .about-me {
+  width: 50%;
+  height: 100vh;
+  background: #dedede;
+}
+
+.sec-box .about-me .bio {
+  padding: 40px 40px 25px 40px;
+}
+
+.sec-box .about-me .bio h1 {
+  font-size: 6rem;
+  font-family: "Noto Serif KR", serif;
+  margin: 10vh 0 5vh 0;
+  text-decoration: underline;
+  text-align: right;
+}
+
+.sec-box .about-me .bio p {
+  font-size: 1.8rem;
+  font-family: "Noto Sans KR", sans-serif;
+  text-align: justify;
+  text-justify: distribute;
+  line-height: 175%;
+  font-weight: 300;
+}
+
+.third-box {
+  width: 100%;
+  min-height: 100vh;
+  cursor: default;
+}
+
+.third-box .check {
+  width: 100%;
+}
+
+.third-box .check video {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.third-box .check .myworks {
+  position: absolute;
+  width: 100%;
+  top: 50vh;
+  left: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 200;
+  font-variant: sma;
+  text-align: center;
+}
+
+.third-box .check .myworks p {
+  font-size: 8rem;
+  color: #efefef;
+  text-shadow: 1px 1px 2px 2px #a8a6a6, -1px -1px 2px 2px #656565;
+}
+
+.third-box .check .myworks .work {
+  padding: 20px;
+  width: 30%;
+  margin: auto;
+  border: 1px #efefef solid;
+}
+
+.third-box .check .myworks .work:hover {
+  background: #efefef;
+  opacity: 0.3;
+  color: #6f6f6f;
+}
+
+.third-box .check .myworks .work:hover a {
+  color: #000000;
+}
+
+.third-box .check .myworks .work a {
+  font-size: 4rem;
+  font-weight: 100;
+  display: block;
+  color: #efefef;
+  text-decoration: none;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.fourth-box {
+  height: 40vh;
+  width: 100%;
+  padding: 15px;
+  background: #efefef;
+}
+
+.fourth-box .together {
+  padding: 15px;
+  height: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fourth-box .together p {
+  font-family: "Noto Serif KR", serif;
+  font-size: 5rem;
+}
+
+.fourth-box .together .email {
+  padding: 20px;
+  border: 1px #656565 solid;
+}
+
+.fourth-box .together .email:hover {
+  background: #656565;
+  color: #efefef;
+}
+
+.fourth-box .together .email:hover a {
+  color: #efefef;
+}
+
+.fourth-box .together .email a {
+  font-size: 2rem;
+  font-weight: 100;
+  display: block;
+  color: #665566;
+  text-decoration: none;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.fourth-box .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+  height: 4vh;
+  margin: 3vh auto;
+  padding: 40px;
+}
+
+.fourth-box .socials i {
+  color: #656565;
+  -webkit-transition: all 0.75s;
+  transition: all 0.75s;
+}
+
+.fourth-box .socials i:hover {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+.fourth-box .socials i:hover .socials {
+  background: #656565;
+}
+/*# sourceMappingURL=style.css.map */

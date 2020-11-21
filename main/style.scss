@@ -1,0 +1,360 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+  cursor: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  width: 100vw;
+  box-sizing: border-box;
+  .container {
+    background: #eeeeee;
+  }
+}
+
+.sec-box,
+.third-box {
+  margin: 0 0 15vh 0;
+}
+.cursor {
+  width: 30px;
+  height: 30px;
+  // border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  // box-shadow: 2px -3px 41px -1px rgba(250, 250, 250, 0.64);
+  transition: all 0.1s linear;
+  pointer-events: none;
+  background: #656565;
+}
+
+header {
+  width: 100%;
+  height: 20vh;
+  position: fixed;
+  top: 0;
+  display: flex;
+  padding: 10px 50px;
+  justify-content: space-between;
+  // align-items: ;
+  .mode {
+    width: 55px;
+    height: 35px;
+    border: 1px solid #656565;
+    border-radius: 15px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    // .light,
+    // .dark {
+    //   width: 20px;
+    //   height: 20px;
+    //   border-radius: 50%;
+    //   // box-shadow: 1px 1px rgba(216, 188, 96, 0.64),
+    //   //   -1px 1px rgba(216, 188, 96, 0.64);
+    // }
+    // .light {
+    //   // border: 2px solid #656565;
+    //   background: #777777;
+    // }
+    // .dark {
+    //   background: #efefef;
+    //   visibility: hidden;
+    // }
+  }
+
+  nav {
+    width: 30%;
+    .menu {
+      display: flex;
+      width: 100%;
+      padding: 10px;
+      // justify-content: space-between;
+      align-items: center;
+      // font-family: "Open Sans", sans-serif;
+      font-family: "Noto Sans KR", sans-serif;
+      transition: all 0.5s;
+      p {
+        font-size: 2rem;
+        padding: 0 15px;
+        cursor: default;
+      }
+      i {
+        transform: rotate(-90deg);
+        transition: all 1s;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      li {
+        // font-family: "Open Sans", sans-serif;
+        font-family: "Noto Sans KR", sans-serif;
+        font-variant: small-caps;
+        padding: 2px 30px;
+        visibility: hidden;
+        transition: all 0.5s;
+
+        & :hover {
+          border-bottom: 1px solid black;
+        }
+        a {
+          text-decoration: none;
+          color: inherit;
+          font-size: 1.8rem;
+          &:hover {
+            font-size: 1.9rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu:hover {
+  i {
+    transform: rotate(0deg);
+  }
+}
+
+.menu:hover + ul {
+  li {
+    visibility: visible;
+  }
+}
+
+.vid {
+  background: black;
+  #montage {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    // position: fixed;
+  }
+}
+
+.first-box {
+  height: 120vh;
+  padding: 0 0 20vh 0;
+  background: #ffffff;
+  .name {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+    height: 20vh;
+    .hello {
+      font-size: 7rem;
+    }
+    .nom {
+      font-size: 10rem;
+      position: relative;
+      top: 25vh;
+      // color: transparent;
+      color: black;
+      -webkit-text-stroke: 1px #000000;
+      opacity: 0.8;
+      // font-weight: 700;
+      &:hover {
+        + .cursor {
+          transform: scale(2);
+          mix-blend-mode: difference;
+          background: white;
+        }
+      }
+    }
+    .ami {
+      font-size: 2rem;
+    }
+
+    p {
+      font-family: "Noto Serif KR", serif;
+    }
+  }
+
+  .my-picture {
+    width: 100%;
+    // height: 75vh;
+    margin: auto;
+    .pic {
+      margin: auto;
+      width: 100%;
+      height: 75vh;
+
+      img {
+        // width: inherit;
+        display: block;
+        margin: auto;
+        height: inherit;
+      }
+    }
+  }
+}
+
+.sec-box {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  // justify-content: space-around;
+  align-items: flex-end;
+  background: #eeeeee;
+
+  // padding: 0 0 20vh 0;
+  .portrait {
+    width: 50%;
+    height: 75vh;
+    img {
+      display: block;
+      height: inherit;
+      padding: 25px;
+    }
+  }
+  .about-me {
+    width: 50%;
+    height: 100vh;
+    background: #dedede;
+
+    .bio {
+      padding: 40px 40px 25px 40px;
+      h1 {
+        font-size: 6rem;
+        font-family: "Noto Serif KR", serif;
+        margin: 10vh 0 5vh 0;
+        // padding: 5px;
+        text-decoration: underline;
+        text-align: right;
+      }
+      p {
+        font-size: 1.8rem;
+        font-family: "Noto Sans KR", sans-serif;
+        // font-family: "Open Sans", sans-serif;
+        // font-variant: small-caps;
+        // font-family: "Noto Serif KR", serif;
+
+        text-align: justify;
+        text-justify: distribute;
+        line-height: 175%;
+
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+.third-box {
+  width: 100%;
+  min-height: 100vh;
+  cursor: default;
+  .check {
+    width: 100%;
+    video {
+      // z-index: -1;
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+    }
+    .myworks {
+      position: absolute;
+      width: 100%;
+      top: 50vh;
+      left: 0;
+      font-family: "Noto Sans KR", sans-serif;
+      font-weight: 200;
+      font-variant: sma;
+      text-align: center;
+      p {
+        font-size: 8rem;
+        color: #efefef;
+        text-shadow: 1px 1px 2px 2px#a8a6a6, -1px -1px 2px 2px #656565;
+      }
+      .work {
+        padding: 20px;
+        width: 30%;
+        margin: auto;
+        border: 1px #efefef solid;
+        &:hover {
+          background: #efefef;
+          opacity: 0.3;
+          color: #6f6f6f;
+          & a {
+            color: #000000;
+          }
+        }
+        a {
+          font-size: 4rem;
+          font-weight: 100;
+          display: block;
+          color: #efefef;
+          text-decoration: none;
+          font-family: "Noto Sans KR", sans-serif;
+        }
+      }
+    }
+  }
+}
+
+.fourth-box {
+  height: 40vh;
+  width: 100%;
+  padding: 15px;
+  background: #efefef;
+  .together {
+    padding: 15px;
+    height: 15vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    p {
+      font-family: "Noto Serif KR", serif;
+      font-size: 5rem;
+    }
+    .email {
+      padding: 20px;
+      border: 1px #656565 solid;
+      &:hover {
+        background: #656565;
+        color: #efefef;
+        & a {
+          color: #efefef;
+        }
+      }
+      a {
+        font-size: 2rem;
+        font-weight: 100;
+        display: block;
+        color: #665566;
+        text-decoration: none;
+        font-family: "Noto Sans KR", sans-serif;
+      }
+    }
+  }
+  .socials {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    height: 4vh;
+    margin: 3vh auto;
+    // background-color: #aaaaaa;
+    padding: 40px;
+    i {
+      color: #656565;
+      transition: all 0.75s;
+    }
+    i:hover {
+      // color: #efefef;
+      transform: scale(1.4);
+
+      & .socials {
+        background: #656565;
+      }
+    }
+  }
+}
